@@ -9,7 +9,7 @@ def exemplo_1():
     loja_batel = LojaCalzone('loja_3721')
 
     # método da class abstrato
-    LojaCalzone.abrir_loja(loja_batel)  # Loja Batel Calzone - Curitiba Aberta!
+    loja_batel.abrir_loja()  # Loja Batel Calzone - Curitiba Aberta!
 
     loja_batel.numero_pedido(123)  # Ligando forno para assar: Calzone de Calabraza
 
@@ -29,7 +29,7 @@ def exemplo_1():
     )  # Número do Pedido Entregue: 123
 
     print()
-    LojaCalzone.fechar_loja(loja_batel)  # Forno Desligado!
+    loja_batel.fechar_loja()  # Forno Desligado!
     # Loja Batel Calzone - Curitiba Fechada!
 
 
