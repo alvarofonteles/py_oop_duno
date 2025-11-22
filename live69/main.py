@@ -2,7 +2,7 @@
 
 from exemplo_1 import MinhaImplement
 from exemplo_2 import Cachorro, Gato, Animal
-from exemplo_4 import Padaria, Supermercado, pessoa, Fila
+from exemplo_4 import Padaria, Supermercado, pessoa, Fila, Banheiro
 
 
 def exemplo_1():
@@ -42,34 +42,28 @@ def exemplo_2():
 
 
 def exemplo_3():
-    '''Teste do __subclasshook__'''
+    '''Class Banheiro __subclasshook__'''
 
     print('exemplo_3')
-    # classes que implementam todos métodos
-    print(
-        f'Padaria é subclasse de Fila? {issubclass(Padaria, Fila)}'
-    )  # Padaria é subclasse de Fila? True
-    print(
-        f'Supermercado é subclasse de Fila? {issubclass(Supermercado, Fila)}'
-    )  # Supermercado é subclasse de Fila? True
 
-    # com instâncias
-    padaria = Padaria()
-    supermercado = Supermercado()
-    print(
-        f'padaria é instância de Fila? {isinstance(padaria, Fila)}'
-    )  # padaria é instância de Fila? True
-    print(
-        f'supermercado é instância de Fila? {isinstance(supermercado, Fila)}'
-    )  # supermercado é instância de Fila? True
+    banheiro = Banheiro()
 
-    # classe que NÃO implementa todos métodos
+    print(
+        f'Banheiro é subclasse de Fila? {issubclass(Banheiro, Fila)}'
+    )  # Banheiro é subclasse de Fila? True
+
+    print(
+        f'Banheiro é instância de Fila? {isinstance(banheiro, Fila)}'
+    )  # Banheiro é instância de Fila? True
+
+    # Teste NEGATIVO - classe que FALTA métodos
     # class FilaIncompleta:
-    #     def entrar(self, obj):
-    #         pass # Faltam outros métodos...
+    #     def entrar(self, obj): # Faltam outros métodos...
+    #         pass
 
-    # print(f'FilaIncompleta é subclasse? {issubclass(FilaIncompleta, Fila)}')  # False
+    # print(issubclass(FilaIncompleta, Fila))  # False - subclasshook reprova!
     # AssertionError: __subclasshook__ must return either False, True, or NotImplemented
+
     print()
 
 

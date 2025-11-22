@@ -53,3 +53,25 @@ class Supermercado(Fila):
 
     def __repr__(self):
         return f'Fila({self.fila_prioridade + self.fila_normal})'
+
+
+# __subclasshook__ para banheiro
+class Banheiro:
+
+    def __init__(self):
+        self.it = []
+
+    def entrar(self, obj):
+        pass
+
+    def sair(self, pos=0):
+        pass
+
+    def __len__(self):
+        pass
+
+    def __contains__(self, obj):
+        pass
+
+    def __repr__(self):
+        pass
